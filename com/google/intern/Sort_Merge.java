@@ -1,14 +1,13 @@
 package com.google.intern;
 
 public class Sort_Merge {
-	public int[] merge_sort (int[]  A, int left, int right) {
-		if (left == right)
-			return A;
+	public void merge_sort (int[]  A, int left, int right) {
+		if (left >= right)
+			return;
 		int middle = (right + left) / 2;
 		merge_sort (A, left, middle);
 		merge_sort (A, middle+1, right);
 		merge(A, left, middle, right);
-		return A;
 	}
 	
 	void merge(int[] A, int left, int middle, int right) {
@@ -39,8 +38,8 @@ public class Sort_Merge {
 	public static void main(String[] args) {
 		Sort_Merge sm = new Sort_Merge();
 		int[] test = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };
-		int[] result = sm.merge_sort(test, 0, test.length-1);
-		for (int i : result) {
+		sm.merge_sort(test, 0, test.length-1);
+		for (int i : test) {
 			System.out.print(i + " ");
 		}
 	}
