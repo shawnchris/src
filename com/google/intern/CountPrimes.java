@@ -35,7 +35,8 @@ public class CountPrimes {
 		System.out.println(cp.countPrimes(1000));
 		System.out.println(cp.countPrimes(10000));
 		System.out.println(cp.countPrimes(100000));
-
+		//System.out.println(cp.countPrimes(Integer.MAX_VALUE/2));
+		System.out.println(Integer.MAX_VALUE);
 	}
 
 }
